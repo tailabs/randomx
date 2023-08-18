@@ -1,5 +1,9 @@
 # RandomX - Random String Generator
 
+[![license](https://img.shields.io/github/license/tailabs/randomx.svg)](https://github.com/tailabs/randomx/blob/main/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tailabs/randomx)](https://goreportcard.com/report/github.com/tailabs/randomx)
+[![release](https://img.shields.io/github/release/tailabs/randomx/all.svg)](https://github.com/tailabs/randomx/releases)
+
 RandomX is a Go package that provides a user-friendly tool for generating random strings. It enables you to generate random strings of specified lengths with various character sets, including lowercase letters, uppercase letters, digits, and symbols.
 
 This package was developed with the assistance of [ChatGPT 3.5](https://openai.com/), an advanced language model created by OpenAI.
@@ -11,7 +15,6 @@ To incorporate RandomX into your Go project, you can easily install it with the 
 ```shell
 go get -u github.com/tailabs/randomx
 ```
-
 
 ## Usage
 
