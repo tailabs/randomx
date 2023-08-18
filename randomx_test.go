@@ -60,3 +60,44 @@ func TestProvider_GenerateRandomStringFromBuiltin(t *testing.T) {
 		}
 	}
 }
+
+func TestProvider_GenerateRandomStringFromBuiltin_PredefinedOptions(t *testing.T) {
+	rx := New().(*provider)
+
+	tests := []struct {
+		length  int
+		options GenerateOptions
+	}{
+		{15, OptionAllChars},
+		{10, OptionLetters},
+		{8, OptionDigitsOnly},
+	}
+
+	for _, test := range tests {
+		randomStr := rx.GenerateRandomStringFromBuiltin(test.length, test.options)
+
+		expectedCharSet := ""
+		if test.options.UseLowercase {
+			expectedCharSet += LowercaseLetters
+		}
+		if test.options.UseUppercase {
+			expectedCharSet += UppercaseLetters
+		}
+		if test.options.UseDigits {
+			expectedCharSet += Digits
+		}
+		if test.options.UseSymbols {
+			expectedCharSet += Symbols
+		}
+
+		if len(randomStr) != test.length {
+			t.Errorf("Generated string length does not match expected length for options %+v", test.options)
+		}
+
+		for _, char := range randomStr {
+			if !strings.Contains(expectedCharSet, string(char)) {
+				t.Errorf("Generated string contains unexpected character: %s", string(char))
+			}
+		}
+	}
+}

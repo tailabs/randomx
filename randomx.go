@@ -13,6 +13,30 @@ const (
 	Symbols          = "!@#$%^&*()-_=+[]{}|;:,.<>?/~"
 )
 
+// Predefined GenerateOptions for commonly used character sets
+var (
+	OptionAllChars = GenerateOptions{
+		UseLowercase: true,
+		UseUppercase: true,
+		UseDigits:    true,
+		UseSymbols:   true,
+	}
+
+	OptionLetters = GenerateOptions{
+		UseLowercase: true,
+		UseUppercase: true,
+		UseDigits:    false,
+		UseSymbols:   false,
+	}
+
+	OptionDigitsOnly = GenerateOptions{
+		UseLowercase: false,
+		UseUppercase: false,
+		UseDigits:    true,
+		UseSymbols:   false,
+	}
+)
+
 // Interface defines the methods for generating random strings.
 type Interface interface {
 	GenerateRandomString(length int, charSet string) string
