@@ -1,4 +1,12 @@
-# RandomX - Random String Generator
+**Important:** This repository is now in read-only mode. The development has moved to a new repository.
+
+## New Repository
+
+The latest updates and active development are now happening in the following repository: [Crewx](https://github/release/tailabs/crewx)
+
+Please update your references and contribute to the new repository if you have any contributions or issues.
+
+# RandomX - Random String Generator (Read-Only)
 
 [![license](https://img.shields.io/github/license/tailabs/randomx.svg)](https://github.com/tailabs/randomx/blob/main/LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tailabs/randomx)](https://goreportcard.com/report/github.com/tailabs/randomx)
